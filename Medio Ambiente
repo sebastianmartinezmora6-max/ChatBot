@@ -1,6 +1,13 @@
 import discord
+from discord.ext import commands
 
-#comando
+# Intents
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+#comamndo ambiental
 @bot.command()
 async def canecas_basura(ctx):
     colores = [
@@ -9,6 +16,6 @@ async def canecas_basura(ctx):
         "⚫ Gris o negro → No reciclables"
     ]
     await ctx.send("\n".join(colores))
-    
+
 # Ejecutar bot
 bot.run("Token")
