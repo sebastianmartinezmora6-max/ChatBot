@@ -7,7 +7,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='$', intents=intents)
 
-#comamndo ambiental
+#comando ambiental
 @bot.command()
 async def canecas_basura(ctx):
     colores = [
@@ -16,6 +16,26 @@ async def canecas_basura(ctx):
         "⚫ Gris o negro → No reciclables"
     ]
     await ctx.send("\n".join(colores))
+
+@bot.command()
+async def arboles(ctx):
+    await ctx.send("Árboles → Producen oxígeno y ayudan a combatir el cambio climático")
+
+@bot.command()
+async def reciclaje(ctx):
+    await ctx.send("Reciclaje → Reduce residuos y protege los recursos naturales")
+
+@bot.command()
+async def agua(ctx):
+    await ctx.send("Agua → Recurso vital que debemos cuidar y no desperdiciar")
+
+@bot.command()
+async def energia(ctx):
+    await ctx.send("Energía renovable → Solar, eólica e hidráulica ayudan al planeta")
+
+@bot.command()
+async def animales(ctx):
+    await ctx.send("Animales → Parte esencial de los ecosistemas")
 
 # Ejecutar bot
 bot.run("Token")
