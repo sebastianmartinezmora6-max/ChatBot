@@ -11,9 +11,9 @@ bot = commands.Bot(command_prefix='$', intents=intents)
 @bot.command()
 async def canecas_basura(ctx):
     colores = [
-        "🟦 Azul → Papel y cartón",
-        "🟩 Verde → Orgánicos",
-        "⚫ Gris o negro → No reciclables"
+        "Azul → Papel y cartón",
+        "Verde → Orgánicos",
+        "Gris o negro → No reciclables"
     ]
     await ctx.send("\n".join(colores))
 
@@ -31,11 +31,15 @@ async def agua(ctx):
 
 @bot.command()
 async def energia(ctx):
-    await ctx.send("Energía renovable → Solar, eólica e hidráulica ayudan al planeta")
+    await ctx.send("Energía → Permite el funcionamiento de la vida, el movimiento, la tecnología y los procesos naturales como la fotosíntesis y el clima ayudan al planeta")
 
 @bot.command()
 async def animales(ctx):
     await ctx.send("Animales → Parte esencial de los ecosistemas")
+
+@bot.command()
+async def Oxígeno(ctx):
+    await ctx.send("Es un gas esencial para la vida: lo usamos para respirar y producir energía en nuestras células")
 
 # Ejecutar bot
 bot.run("Token")
